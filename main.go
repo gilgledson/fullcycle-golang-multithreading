@@ -10,15 +10,15 @@ import (
 )
 
 type ResponseApicep struct {
-	Code  string `json:code`
-	State string `json:state`
-	City  string `json:city`
+	Code  string `json:"code"`
+	State string `json:"state"`
+	City  string `json:"city"`
 }
 
 type ResponseViaCep struct {
-	Cep        string `json:cep`
-	Uf         string `json:uf`
-	Localidade string `json:localidade`
+	Cep        string `json:"cep"`
+	Uf         string `json:"uf"`
+	Localidade string `json:"localidade"`
 }
 
 func requestApiCep(cep string, ch chan ResponseApicep) {
